@@ -1,6 +1,7 @@
 *{
     box-sizing: border-box;
     margin:0;
+    color:white
 }
 
 #game {
@@ -9,24 +10,26 @@
     width: 100vw;
     height:100vh;
     align-items: center;
+    justify-content: end;
+    padding-bottom: 1rem;
     background-color: rgba(79, 151, 154, 0.728);
 }
 
 .drops{
     display: flex;
-    height: 20vh;
+    height: 10vh;
     align-items: flex-end;
     justify-content:center;
 }
 
 .drop {
-    height:15vh;
-    width:15vh;
+    height:12vh;
+    width:12vh;
     margin-left: 1vh;
     translate: -.5vh;
 }
 
-
+/* temporary, need a better animation eventually */
 .drop:hover{
     background-color: gray;
     cursor: pointer;
@@ -34,12 +37,23 @@
 
 #game-board{
     display:grid;
-    grid-template-columns: repeat(6, 15vh);
+    grid-template-columns: repeat(7, 12vh);
+    grid-template-rows: repeat(6, 12vh);
     gap: 1vh;
 }
 
 .cell {
+    display: flex;
     background-color: black;
-    height: 15vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
 }
 
+.cell.red {
+    color:red
+}
+
+.cell.yellow{
+    color:yellow
+}
