@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+}
+
+#game {
+    display:flex;
+    flex-direction: column;
+    width: 100vw;
+    height:100vh;
+    align-items: center;
+    background-color: rgba(79, 151, 154, 0.728);
+}
+
+.drops{
+    display: flex;
+    height: 20vh;
+    align-items: flex-end;
+    justify-content:center;
+}
+
+.drop {
+    height:15vh;
+    width:15vh;
+    margin-left: 1vh;
+    translate: -.5vh;
+}
+
+
+.drop:hover{
+    background-color: gray;
+    cursor: pointer;
+}
+
+#game-board{
+    display:grid;
+    grid-template-columns: repeat(6, 15vh);
+    gap: 1vh;
+}
+
+.cell {
+    background-color: black;
+    height: 15vh;
+}
+
