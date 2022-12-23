@@ -2,7 +2,6 @@
     box-sizing: border-box;
     margin:0;
     color:white;
-    background-color: rgba(79, 151, 154, 0.728);
 }
 
 main {
@@ -13,6 +12,7 @@ main {
     align-items: center;
     justify-content: end;
     padding-bottom: 1rem;
+    background-color: rgba(26, 171, 176, 0.728);
 }
 
 .drops{
@@ -27,13 +27,21 @@ main {
     width:12vh;
     margin-left: 1vh;
     translate: -.5vh;
+    opacity: 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
 }
 
 /* temporary, need a better animation eventually */
 .drop:hover{
-    background-color: gray;
     cursor: pointer;
+    display:flex;
+    opacity:100%;
+    color: rgba(0, 0, 0, 0.38);
 }
+
 
 #game-board{
     display:grid;
@@ -44,10 +52,11 @@ main {
 
 .cell {
     display: flex;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.564);
     justify-content: center;
     align-items: center;
     font-size: 3rem;
+    border-radius: .5rem;
 }
 
 .red {
@@ -62,6 +71,10 @@ main {
     display:none !important
 }
 
+.fade{
+    opacity: 70%;
+}
+
 .endgame {
     display: flex;
     height:100vh;
@@ -69,4 +82,17 @@ main {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: absolute;
+    top: 0rem;
+    background-color: rgba(26, 171, 176, 0.728);
+}
+
+.endgame button {
+    background-color: rgba(26, 171, 176, 0.728);
+    border-radius: .5rem;
+}
+
+.endgame button:hover{
+    box-shadow: 0 0 5px 1px black;
+    cursor: pointer;
 }
