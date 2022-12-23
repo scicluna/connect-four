@@ -1,10 +1,11 @@
 *{
     box-sizing: border-box;
     margin:0;
-    color:white
+    color:white;
+    background-color: rgba(79, 151, 154, 0.728);
 }
 
-#game {
+main {
     display:flex;
     flex-direction: column;
     width: 100vw;
@@ -12,7 +13,6 @@
     align-items: center;
     justify-content: end;
     padding-bottom: 1rem;
-    background-color: rgba(79, 151, 154, 0.728);
 }
 
 .drops{
@@ -50,10 +50,23 @@
     font-size: 3rem;
 }
 
-.cell.red {
+.red {
     color:red
 }
 
-.cell.yellow{
+.yellow{
     color:yellow
+}
+
+.hide{
+    display:none !important
+}
+
+.endgame {
+    display: flex;
+    height:100vh;
+    width:100vw;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
