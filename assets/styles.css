@@ -86,11 +86,13 @@ main {
     position: absolute;
     top: 0rem;
     background-color: rgba(26, 171, 176, 0.728);
+    font-size: 5rem;
 }
 
 .endgame button {
     background-color: rgba(26, 171, 176, 0.728);
     border-radius: .5rem;
+    font-size: 5rem;
 }
 
 .endgame button:hover{
