@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin:0;
     color:white;
+    font-family: 'Work Sans', sans-serif;
 }
 
 main {
@@ -31,7 +32,7 @@ main {
     display:flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
+    font-size: 10rem;
 }
 
 /* temporary, need a better animation eventually */
@@ -55,7 +56,7 @@ main {
     background-color: rgba(0, 0, 0, 0.564);
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
+    font-size: 10rem;
     border-radius: .5rem;
 }
 
