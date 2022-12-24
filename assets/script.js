@@ -396,12 +396,12 @@ function easyAi(grid){
     //pick random column
     let aiColumn = []
     if(aDepth !== 0){aiColumn.push("a")}
-    if(aDepth !== 0){aiColumn.push("b")}
-    if(aDepth !== 0){aiColumn.push("c")}
-    if(aDepth !== 0){aiColumn.push("d")}
-    if(aDepth !== 0){aiColumn.push("e")}
-    if(aDepth !== 0){aiColumn.push("f")}
-    if(aDepth !== 0){aiColumn.push("g")}
+    if(bDepth !== 0){aiColumn.push("b")}
+    if(cDepth !== 0){aiColumn.push("c")}
+    if(dDepth !== 0){aiColumn.push("d")}
+    if(eDepth !== 0){aiColumn.push("e")}
+    if(fDepth !== 0){aiColumn.push("f")}
+    if(gDepth !== 0){aiColumn.push("g")}
     let rand = Math.floor(Math.random()*aiColumn.length)
     let aiPick = aiColumn[rand]
     //determine its depth
