@@ -203,7 +203,7 @@ function checkNext (grid, y, x, moveDirection){
         return
     }
 
-    if (range === 3){
+    if (range >= 3){
         winflag = true
     }
 }
@@ -628,7 +628,6 @@ function evaluateRange(grid, y, x, moveDirection, ogY, ogX){
         evoGrid[ogY][ogX] = range
         }
         evaluateRange(grid, newY, newX, moveDirection, ogY, ogX)
-        console.log(evoGrid)
     }
 
 
