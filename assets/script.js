@@ -151,7 +151,7 @@ function handleTurn(e){
         }
 
         if(ai === "medium" && winflag === false){
-            mediumAi(grid)
+            mediumAi(grid, e)
         }
 
 }
@@ -163,6 +163,7 @@ drops.forEach(drop =>{
 
 //removing event listeners if the depth of the column is 0
 function cleanDrops(e){
+    console.log("clean")
     if (( e === 'a' || e.srcElement.dataset.column === 'a') && aDepth === 0){
         dropa.removeEventListener("click", handleTurn)
     }
@@ -450,7 +451,7 @@ function easyAi(grid){
     playerActive = playerActive === "Red" ? "Yellow" : "Red"
 }
 
-function mediumAi(grid){
+function mediumAi(grid, e){
     evaluateGrid(grid)
     let aiColumn = []
     if(aDepth !== 0 && (evoGrid[aDepth-1][0] === Math.max(...evoGrid.flat()))){aiColumn.push("a")}
@@ -543,7 +544,7 @@ function mediumAi(grid){
     }
 
     //clean up our drop eventlisteners in the case that a column fills up
-    
+    cleanDrops(e)
     //change the active player
     playerTurn = playerTurn === 1 ? -1 : 1
     playerActive = playerActive === "Red" ? "Yellow" : "Red"
